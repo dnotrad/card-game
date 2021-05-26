@@ -1,0 +1,54 @@
+.gameBoard {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 35px;
+
+  transition: .4s ease;
+}
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+}
+
+.cards.hide{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.times{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .4s ease;
+  font-size: 25px;
+  text-align: center;
+}
+.times_title{
+  margin-bottom: 15px;
+}
+.times.hide{
+  opacity: 0;
+  visibility: hidden;
+}
