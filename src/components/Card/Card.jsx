@@ -13,7 +13,7 @@ const Card = ({ data }) => {
   }
   return (
     <button
-      disabled={isInterfaceBlocked || !data.isOnBoard || !isGameStart}
+      disabled={isInterfaceBlocked || !data.isOnBoard || !isGameStart || data.isOpen}
       className={`${s.card} ${data.isOpen && s.active} ${
         !data.isOnBoard && s.hide
       } ${!isGameStart && s.disabled}`}
